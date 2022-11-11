@@ -9,7 +9,7 @@
         <div class="col-sm-offset-2">
             <div class="panel panel-default border rounded bg-white mb-4 col-sm-6">
 			
-				<div class="panel-heading border-bottom text-center fw-bold p-3">
+				<div class="panel-heading border-bottom text-center fw-bold p-3 bg-primary rounded text-white">
 					Form Edit Task
 				</div>
 				

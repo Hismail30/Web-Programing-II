@@ -5,7 +5,7 @@
     <div class="container">
         <div class="col-sm-offset-2">
             <div class="panel panel-default border rounded bg-white col-sm-6 mb-4">
-                <div class="panel-heading text-white border-bottom text-center fw-bold p-3 bg-primary rounded ">
+                <div class="panel-heading text-white border-bottom text-center bg-primary fw-semibold p-3 rounded ">
                     Form Create Task
                 </div>
 
@@ -27,7 +27,7 @@
                         <!-- Add Task Button -->
                         <div class="form-group">
                             <div class="col-sm-offset-3">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn px-3 btn-primary">
                                     Add Task
                                 </button>
                             </div>
@@ -51,16 +51,30 @@
 
                     <div class="panel-body p-3">
                         <table class="table table-striped task-table">
+                        <!-- <label for="search" class="ms-2 mb-1" >Cari data : </label> -->
+                            <div class="row  ">
+                                    <!-- New Task Form -->
+                                    <form class="mt-2" method="get" action="{{ route('search') }}">
+                                            <div class="form-group col-sm-10 col-md-4 mb-2   " >
+                                                    <input placeholder="Keyword..." type="text" name="search" id="search" class="table-text form-control">
+                                            </div>
+                                            <div class=" form-group col-6 col-md-4 mb-4">
+                                                 <button type="submit" class="btn px-3 btn-primary">
+                                                        Search
+                                                 </button>  
+                                            </div>
+                                    </form>
+                                </div>
                             <thead>
                                 <th class="align-middle">Task Name</th>
-                                <th class="text-end" colspan="2">
+                                <!-- <th class="text-end" colspan="2">
 									<form class="form" method="get" action="{{ route('search') }}">
 										<div class="form-group">
 											<input type="text" name="search" class="form-control w-50 d-inline" id="search" placeholder="Keyword...">
 											<button type="submit" class="btn btn-primary mx-1 mb-1">Search</button>
 										</div>
 									</form>
-								</th>
+								</th> -->
                             </thead>
                             <tbody>
                                 @foreach ($tasks as $task)
@@ -88,25 +102,39 @@
                     </div>
                 </div>  
             @else
-                <div class="panel panel-default border rounded mb-3  ">
+                <div class="panel panel-default border rounded mb-3 ">
                         <div class="panel-heading border-bottom text-center fw-bold p-3 bg-light">
                             Tasks Data
                         </div>
 
                         <div class="panel-body p-3">
                             <table class="table table-striped task-table">
+                            <!-- <label for="search" class="ms-2 mb-1" >Cari data : </label> -->
+                            <div class=" row">
+                                    <!-- New Task Form -->
+                                    <form class="mt-2" method="get" action="{{ route('search') }}">
+                                            <div class="form-group col-sm-10 col-md-4 mb-2   " >
+                                                    <input placeholder="Keyword..." type="text" name="search" id="search" class="table-text form-control">
+                                            </div>
+                                            <div class=" form-group col-6 col-md-4 mb-4">
+                                                 <button type="submit" class="btn px-3 btn-primary">
+                                                        Search
+                                                 </button>  
+                                            </div>
+                                    </form>
+                                </div>
                                 <thead>
                                     <th class="align-middle">Task Name</th>
-                                    <th class="text-end" colspan="2">
+                                    <!-- <th class="text-end" colspan="2">
                                         <form class="form" method="get" action="{{ route('search') }}">
                                             <div class="form-group ">
                                                 <tr class="">
-                                                    <input type="text" name="search" class=" table-text form-control w-25 d-inline mb-2" id="search" placeholder="Keyword...">
+                                                    <input type="text" name="search" class="table-text form-control w-25 d-inline mb-2" id="search" placeholder="Keyword...">
                                                     <button type="submit" class="btn btn-primary mx-1 mb-1">Search</button>
                                                 </tr>      
                                             </div> 
                                         </form>
-                                    </th>
+                                    </th> -->
                                 </thead>
                                 <tbody class="">
                                         <tr class="">
@@ -119,7 +147,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="panel-body p-3">
+                        <!-- <div class="panel-body p-3">
                             <table class="table table-striped task-table">
                                 <thead>
                                     <th class="align-middle">Task Name</th>
@@ -135,7 +163,7 @@
                                     </th>
                                 </thead>
                             </table>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             @endif

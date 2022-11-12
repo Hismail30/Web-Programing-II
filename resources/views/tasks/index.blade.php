@@ -52,19 +52,18 @@
                     <div class="panel-body p-3">
                         <table class="table table-striped task-table">
                         <!-- <label for="search" class="ms-2 mb-1" >Cari data : </label> -->
-                            <div class="row  ">
+                            <div class="row justify-content-end  ">
                                     <!-- New Task Form -->
                                     <form class="mt-2" method="get" action="{{ route('search') }}">
-                                            <div class="form-group col-sm-10 col-md-4 mb-2   " >
+                                            <div class="form-group col-sm-auto col-md-4 mb-2 " >
                                                     <input placeholder="Keyword..." type="text" name="search" id="search" class="table-text form-control">
                                             </div>
-                                            <div class=" form-group col-6 col-md-4 mb-4">
+                                            <div class="form-group col-sm-auto col col-md-auto col-lg-auto mb-4">
                                                  <button type="submit" class="btn px-3 btn-primary">
                                                         Search
                                                  </button>  
                                             </div>
-                                    </form>
-                                </div>
+                                    </form>    
                             <thead>
                                 <th class="align-middle">Task Name</th>
                                 <!-- <th class="text-end" colspan="2">
@@ -87,11 +86,13 @@
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
 
+                                                <!-- Button trigger modal -->
                                                 <button type="submit" id="delete-task-{{ $task->id }}" class="btn btn-danger" onclick="return confirm('{{ __('Are you sure you want to delete') }} {{ $task->name }} {{ '?' }}')">
                                                     Delete
                                                 </button>
                                             </form>
                                         </td>
+                                        
 										<td class="col-2 text-end">
 											<a href="{{url('task/edit')}}/{{$task->id}}" class="btn btn-success">Edit</a>
 										</td>
@@ -108,15 +109,15 @@
                         </div>
 
                         <div class="panel-body p-3">
-                            <table class="table table-striped task-table">
+                            <table class="table table-striped task-table ">
                             <!-- <label for="search" class="ms-2 mb-1" >Cari data : </label> -->
-                            <div class=" row">
+                            <div class="row justify-content-end">
                                     <!-- New Task Form -->
                                     <form class="mt-2" method="get" action="{{ route('search') }}">
-                                            <div class="form-group col-sm-10 col-md-4 mb-2   " >
+                                            <div class="form-group col-sm-auto col-md-4 mb-2 " >
                                                     <input placeholder="Keyword..." type="text" name="search" id="search" class="table-text form-control">
                                             </div>
-                                            <div class=" form-group col-6 col-md-4 mb-4">
+                                            <div class=" form-group col-sm-auto col col-md-2 col-lg-auto mb-4">
                                                  <button type="submit" class="btn px-3 btn-primary">
                                                         Search
                                                  </button>  
@@ -147,6 +148,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        
                         <!-- <div class="panel-body p-3">
                             <table class="table table-striped task-table">
                                 <thead>

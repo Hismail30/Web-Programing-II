@@ -18,14 +18,26 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-3">
-            <div class="container">
-                <a class="navbar-brand bg-primary rounded px-4 text-white" href="{{ url('/') }}">
+        <nav class="navbar navbar-expand-md  navbar-light bg-white shadow-sm py-3">
+            <div class="container nav-item">
+                <!-- <a class="navbar-brand bg-primary rounded px-4 text-white" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <a class="navbar-brand bg-primary rounded px-4 text-white" href="{{ url('/tasks') }}">
                     task
-                </a>  
+                </a>   -->
+                <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active me-2" aria-current="page" href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}
+                    </a>
+                </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url('/tasks') }}">Task</a>
+                </li>
+
+                </ul>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
